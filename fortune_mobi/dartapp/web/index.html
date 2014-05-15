@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<title>Fortune</title>
+<link rel="stylesheet" href="dartapp.css">
+<meta name="viewport"
+  content="width=device-width, initial-scale=1, maximum-scale=1">
+<link
+  href='http://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope'
+  rel='stylesheet' type='text/css'>
+<link
+  href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+  rel="stylesheet">
+<link rel="stylesheet"
+  href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body ng-cloak>
+  <div class="navbar navbar-fixed-top"
+    style="text-align: center; margin-left: auto; margin-right: auto;">
+  </div>
+
+  <div zodiacs>
+
+    <div ng-switch="ctrl.zodiacwasSelected">
+      <div ng-switch-when="false">
+
+        <div ng-repeat="zodiac in ctrl.zodiacarr"
+          ng-click="ctrl.selectZodiac(zodiac)">
+          <div class='media'>
+            <img src='images/{{zodiac.image}}.png' class='pull-left'
+              alt='{{zodiac.name}}'>
+            <div class='pull-right zodicname '>
+              {{zodiac.name}}<i class="fa fa-chevron-circle-right fa-1x"></i>
+            </div>
+          </div>
+        </div>                
+      </div>
+      <div ng-switch-when="true">
+      
+        <luckyteller zodiacobj="ctrl.selectedZodiac" zodiacwasSelected ="ctrl.zodiacwasSelected" > </luckyteller>
+      
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="packages/shadow_dom/shadow_dom.min.js"></script>
+  <script type="application/dart" src="main.dart"></script>
+  <script type="text/javascript" src="packages/browser/dart.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script
+    src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>
