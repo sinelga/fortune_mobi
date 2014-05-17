@@ -7,8 +7,13 @@ import "package:jsonp/jsonp.dart" as jsonp;
 import 'dart:async';
 import 'dart:math';
 //import 'dart:html';
+//Stream<js.Proxy> user_stream = jsonp.fetchMany("user");
 
+//var start = false;
 var fortuneTellerarr = new List<FortuneTeller>();
+var zodiac = new Zodiac();
+//var link;
+Stopwatch watch;
 
 @Component(selector: 'luckyteller', templateUrl: 'packages/dartapp/luckyTeller/luckyteller.html', applyAuthorStyles: true, cssUrl: 'packages/dartapp/luckyTeller/luckyteller.css', publishAs: 'cmp')
 class Luckyteller {
@@ -18,11 +23,14 @@ class Luckyteller {
   bool zodiacwasSelected;
   @NgOneWay('luckyTeller')
   FortuneTeller luckyTeller;
+  @NgOneWay('zodiacdesc')
+  String zodiacdesc;
+  @NgTwoWay('zodiacdescOK')
+  bool zodiacdescOK;
 
   Luckyteller() {
 
     if (fortuneTellerarr.isEmpty) {
-      print("Start empty");
 
       Future<js.Proxy> resulttellers = jsonp.fetch(//select * from html where url="http://ellit.fi/horoskoopit/horoskooppimerkit/horoskooppi-vesimies-201-192" and xpath="//div[@class='columnA']/p"
       uri: "http://146.185.140.138/fortunetellers?callback=?");
@@ -43,30 +51,31 @@ class Luckyteller {
         }
         selectLuckyteller();
 
+
       });
 
     } else {
 
-      print("Start  NOT empty");
       selectLuckyteller();
-
 
     }
 
-
   }
-
+  
+  
   closeLuckyteller() {
 
     zodiacwasSelected = false;
+    zodiacdescOK = false;
 
   }
 
   selectLuckyteller() {
+
     var rng = new Random();
     var luckyid = rng.nextInt(fortuneTellerarr.length);
     luckyTeller = fortuneTellerarr[luckyid];
-
+        
   }
 
 }

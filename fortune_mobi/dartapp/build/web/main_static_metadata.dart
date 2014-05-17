@@ -315,6 +315,6 @@ final Map<Type, Object> typeAnnotations = {
     const import_1.Controller(selector: '[zodiacs]', publishAs: 'ctrl'),
   ],
   import_6.Luckyteller: const [
-    const import_1.Component(selector: 'luckyteller', templateUrl: 'packages/dartapp/luckyTeller/luckyteller.html', applyAuthorStyles: true, cssUrl: 'packages/dartapp/luckyTeller/luckyteller.css', publishAs: 'cmp', map: const {'zodiacobj': '=>zodiacobj', 'zodiacwasSelected': '<=>zodiacwasSelected', 'luckyTeller': '=>luckyTeller'}),
+    const import_1.Component(selector: 'luckyteller', templateUrl: 'packages/dartapp/luckyTeller/luckyteller.html', applyAuthorStyles: true, cssUrl: 'packages/dartapp/luckyTeller/luckyteller.css', publishAs: 'cmp', map: const {'zodiacobj': '=>zodiacobj', 'zodiacwasSelected': '<=>zodiacwasSelected', 'luckyTeller': '=>luckyTeller', 'zodiacdesc': '=>zodiacdesc', 'zodiacdescOK': '<=>zodiacdescOK'}),
   ],
 };

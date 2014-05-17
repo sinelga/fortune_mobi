@@ -1,29 +1,49 @@
-<div>
+<div class="luckyteller">
 
-  <i class="fa fa-times-circle fa-2x pull-right "
+  <i class="fa fa-times-circle fa-2x pull-right"
     ng-click='cmp.closeLuckyteller()'></i> <a class="phone"
     href="tel:{{cmp.luckyTeller.phone}}"> {{cmp.luckyTeller.phone}}</a>
 
   <div class="media">
 
     <img class="media-object tellerimage pull-left"
-      src='images/shadow-fortuneteller{{cmp.luckyTeller.id}}.jpg' alt=""></img>
+      src='images/shadow-fortuneteller{{cmp.luckyTeller.id}}.jpg' alt="">
+
     <div class="media-body">
       <div class="media-heading fortunetellername">
-        {{cmp.luckyTeller.name}}&nbsp;<i class="fa fa-home"></i>{{cmp.luckyTeller.location}}
-                   
-      </div>
-      
-     <div class="moto"> {{cmp.luckyTeller.moto}} </div>
-    
-    </div>  
-      
+        {{cmp.luckyTeller.name}}
+        <div class="homelocation">
+          <i class="fa fa-home"></i>{{cmp.luckyTeller.location}}
+        </div>
+      </div> 
+       <div class="moto">{{cmp.luckyTeller.moto}}</div>  
+
+    </div>
+
+  </div>
+  
 
 
-</div>
-
-    <img class="
+  <div ng-switch="cmp.zodiacdescOK">
+    <div ng-switch-when="true">
+      <div class="media">
+        <img class="
       media-object itemimage30
-      pull-left" src='images/{{cmp.zodiacobj.image}}.png' alt="">
+      pull-left"
+          src='images/{{cmp.zodiacobj.image}}.png' alt="">
+        <div class="media-body">
+          <div class="media-heading zodicname">{{cmp.zodiacobj.image}}</div>
+
+        </div>
+      </div>
+
+      <div class="moto">{{cmp.zodiacdesc}}</div>
+    </div>
+    <div ng-switch-when="false">
+      <i class="fa fa-spinner fa-2x fa-spin"></i>
+    </div>
+  </div>
+
+
 
 </div>

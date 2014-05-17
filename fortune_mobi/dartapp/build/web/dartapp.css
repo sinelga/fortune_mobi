@@ -3,24 +3,25 @@ body {
   background-color: white;
   padding-top: 35px;
   margin: 10px;
-  font-family: 'Annie Use Your Telescope', cursive;
+  /*font-family: 'Annie Use Your Telescope', cursive !impotant;*/
   font-size: 26px;
   font-weight: normal;
 }
 [ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak {
   display: none !important;
 }
+* { font-family: 'Annie Use Your Telescope',cursive;}
 
 .zodicname {
   display: block;
   margin-right: 20px;
-  font-family: 'Annie Use Your Telescope', cursive;
+  /*font-family: 'Annie Use Your Telescope', cursive; */
   font-size: 210%;
   text-shadow: 4px 4px 4px #aaa;
 }
 
 .phone {
-  font-family: 'Annie Use Your Telescope', cursive;
+ /* font-family: 'Annie Use Your Telescope', cursive;*/
   font-size: 300%;
   text-shadow: 4px 4px 4px #aaa;
   color: red !important;
@@ -30,15 +31,23 @@ body {
 }
 
 .fortunetellername{
-    font-family: 'Annie Use Your Telescope', cursive;
-  font-size: 200%;
+  /*font-family: 'Annie Use Your Telescope', cursive;*/
+  font-size: 190%;
   text-shadow: 3px 3px 3px #aaa;
   color: red !important;
   
 }
 .moto {
-  font-family: 'Annie Use Your Telescope', cursive;
+ /* font-family: 'Annie Use Your Telescope', cursive;*/
   font-size: 100%;
   text-shadow: 1px 1px 1px #aaa;
   color: black;
+}
+
+.luckyteller {
+   padding: 10px;  
+}
+.homelocation{
+  margin-left: 8px;
+  display: inline-block;  
 }
