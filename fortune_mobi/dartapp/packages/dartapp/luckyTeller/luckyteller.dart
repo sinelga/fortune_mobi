@@ -13,7 +13,7 @@ import 'dart:math';
 var fortuneTellerarr = new List<FortuneTeller>();
 var zodiac = new Zodiac();
 //var link;
-Stopwatch watch;
+//Stopwatch watch;
 
 @Component(selector: 'luckyteller', templateUrl: 'packages/dartapp/luckyTeller/luckyteller.html', applyAuthorStyles: true, cssUrl: 'packages/dartapp/luckyTeller/luckyteller.css', publishAs: 'cmp')
 class Luckyteller {
